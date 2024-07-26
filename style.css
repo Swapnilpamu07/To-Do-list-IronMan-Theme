@@ -1,0 +1,257 @@
+@import "compass/css3";
+
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: black !important;
+  background: url("ironpang.png") ;
+  background-repeat: no-repeat;
+  background-size: 70% 120%;
+  background-position: center;
+  z-index: -1;
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .container .todo h3{
+    margin-left: 7rem !important;
+  }
+  .clear{
+    margin: 7px 15px !important;
+  }
+  .title ul{
+    grid-template-columns: 11rem 3rem 3rem !important;
+  }
+  .list li{
+    font-size: 23px !important;
+  }
+  .bt5{
+    width: 33px !important;
+    height: 33px !important;
+     
+  }
+   
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+   
+  .container .todo h3{
+    margin-left: 6rem !important;
+  }
+  .container .todo img {
+    left: 12rem !important;
+  }
+  .clear{
+    /* margin: 7px 15px !important; */
+  }
+  .title ul{
+    width: inherit;
+    grid-template-columns: 11rem 3rem 3rem !important;
+  }
+  .list li{
+    font-size: 23px !important;
+  }
+  .bt5{
+    width: 33px !important;
+    height: 33px !important;
+     
+  }
+   
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100wh;
+  justify-content: center;
+  align-items: center;
+}
+.container .todo {
+  /* position: relative; */
+  margin-top: 70px;
+  top: -5%;
+  width: fit-content;
+  height: fit-content;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  color: #ffffff;
+}
+.container .todo img {
+  position: absolute;
+    width: 2.5rem;
+    top: 2.4rem;
+    left: 13.8rem;
+    z-index: 2;
+    transform: rotate(20deg);
+}
+.container .todo h3 {
+  margin-left: 7.9rem;
+  font-size: 24px;
+  font-family: "Nunito", sans-serif;
+}
+.container .todo #input {
+  position: relative;
+  top: -1px;
+  bottom: 10px;
+  left: 32px;
+  width: 74%;
+  /* margin: auto !important; */
+  padding: 6px 12px;
+  background: #3a3737;
+  border: 1px solid rgb(60, 63, 68);
+  border-radius: 4px;
+  font-size: 13px;
+  color: rgb(247, 248, 248);
+  appearance: none;
+  transition: border 0.15s ease 0s;
+}
+
+.container .todo #input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #6200ea;
+  border-radius: 4px;
+  background-color: #333333;
+  color: #ffffff;
+  width: 88%;
+  margin-left: -6%;
+}
+ 
+.list {
+  list-style: none;
+}
+.clear {
+  /* margin: 16px 31px; */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #6200ea;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.bt{
+  display: grid;
+  grid-template-columns: 95px 95px 95px;
+  grid-gap: 45px;
+}
+.clear:hover {
+  background-color: #3700b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.list {
+  font-size: 20px;
+}
+.title ul{
+  display: flex;
+  flex-direction: column;
+}
+.list li{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  font-size: 25px;
+}
+
+ /* arc reactor */
+  .container .arc{
+ 
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.9));
+    box-shadow: 0 0 30px rgba(35, 231, 231, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+    animation: orbit 5s linear infinite, colorShift 5s ease infinite, glowPulse 2s ease-in-out infinite, energyFlow 3s linear infinite;
+
+  }
+ 
+@keyframes colorShift {
+  0% {
+      background: radial-gradient(circle at center, rgba(128, 0, 128, 0.5), rgba(0, 0, 255, 0.5));
+  }
+  50% {
+      background: radial-gradient(circle at center, rgba(0, 0, 255, 0.5), rgba(128, 0, 128, 0.5));
+  }
+  100% {
+      background: radial-gradient(circle at center, rgba(128, 0, 128, 0.5), rgba(0, 0, 255, 0.5));
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+      box-shadow: 0 0 20px rgba(128, 0, 128, 0.5), 0 0 40px rgba(0, 0, 255, 0.5);
+  }
+  50% {
+      box-shadow: 0 0 30px rgba(128, 0, 128, 1), 0 0 60px rgba(0, 0, 255, 1);
+  }
+}
+.bt5{
+  position: relative;
+    width: 30px !important;
+    height: 35px;
+    border-radius: 25px;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    margin-top: 0px;
+    /* display: inline-block; */
+    justify-self: flex-end;
+    flex: 1;
+  color:red;
+
+  /* scale: 1; */
+}
+.bt5:hover{
+  background-color: rgb(199, 128, 128,0.4);
+}
+li p{
+  flex:3;
+}
+  
+.bt3 {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+  
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 0px;
+  background-size: cover;  
+  background-position: center;  
+  justify-content: center;
+  flex: 1;
+  color: rgb(81, 234, 81);
+}
+
+.uil{
+  font-weight: bold;
+  font-size: 28px;
+  border: 0;
+  background: transparent;
+  padding:12px auto;
+}
+.bt3:hover{
+  background-color: rgb(199, 128, 128,0.4);
+}
+
+.bt3 svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: white; 
+  transition: fill 0.3s ease;  
+} 
+
+.dash{
+  text-decoration:line-through;
+  color: gray;
+}
